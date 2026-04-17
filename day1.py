@@ -209,11 +209,11 @@ else:
 #question price if house is 20 lkh  if buyer has good credit then they need to pay 10% of the price as down payment otherwise they need to pay 20% of the price as down payment. print the down payment and the house price should be  with unit at the end such as  L for lakh C for crore and K for thousand  and you have to convert that to integer and calculate .
 
 
-house_price =  "20C"
+house_price =  "20c"
 has_good_credit = True
-h_unit = house_price[-1]
+h_unit = (house_price[-1]).upper()
 
-hp = int(house_price.strip("LKC"))
+hp = int(house_price.strip("LKClkc"))
 if (h_unit == "L"):
     final_house_price = hp * math.pow(10, 5)
 elif (h_unit == "K"):
@@ -236,3 +236,29 @@ print("The down payment amount is :")
 print("*-----------------------------*")
 print(f"|  down payment: {downpayment}   |")
 print("*-----------------------------*")
+
+
+
+#logical operators      & is bitwise  operator and and is logical operator. Similarly | is bitwise operator or and or is logical operator or. Logical operators are used to combine conditional statements. We can use logical operators to check multiple conditions in a single if statement. ~ bitwise operator not and logical operator 'not' are used to reverse the logical state of its operand. 
+#__________________________________________________________________
+is_hot = True
+is_cold = 0
+if is_hot and not is_cold:
+    print("it is a hot day")
+
+
+has_good_credit = True
+has_high_income = False
+if has_good_credit or has_high_income:
+    print("eligible for loan")
+
+
+
+#comparison operators  == , != , > , < , >= , <=,
+temperature = 30
+if temperature > 30:
+    print("it is a hot day")
+elif temperature < 30:
+    print("it is a cold day")
+else:
+    print("it is a nice day")
