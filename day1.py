@@ -1,3 +1,7 @@
+import math
+
+
+
 print("hello , my name is Saroj Pathak")
 #python executing the code line by line and then it will print the result of that code. In this case it will print "hello , my name is Saroj Pathak"
 print("0_____~")
@@ -156,3 +160,79 @@ x = 2.9
 print(round(x))
 x = -2.9
 print(abs(round(x)))
+
+#we can also use math module to perform various mathematical operations. We need to import the math module to use its functions.  for this we import math module and then we can use math.ceil() function to perform ceiling division and similarly other function also
+
+
+x = 23.4324
+print(math.ceil(x))
+print(math.floor(x))   # round down
+print(math.trunc(x))   # remove decimal
+print(math.fabs(x))    # absolute value     this cannot calculate  value for complex number whereas abs() function can calculate absolute value for complex number also as that is inbuilt function in python. math.fabs() function can only calculate absolute value for real numbers.
+print(math.sqrt(x))    # square root
+y = 3
+print(math.pow(x, y))  # x^y
+print(math.exp(x))     # e^x
+print(math.log(x))     # natural logarithm
+print(math.log10(x))   # logarithm base 10
+print(math.sin(x))     # sine of x
+#print(math.acos(x))     # arc cosine of x
+print(math.degrees(x)) # convert radians to degrees
+print(math.radians(x)) # convert degrees to radians
+#etc. there are many more functions in math module that we can use to perform various mathematical operations. We can refer to the official documentation of math module for more information about the functions available in math module.
+   
+
+
+   # if statements
+
+is_hot = True
+is_cold = False
+if is_hot:
+    print("*-------------------------*")
+    print("|    it is a hot day      |")
+    print("|   drink plenty of water |")
+    print("*-------------------------*")
+elif is_cold:
+    print("*------------------------*")
+    print("it is a cold day")
+    
+    print("wear warm clothes")
+    print("*------------------------*")
+else:
+    print("*------------------------*")
+    print("   its amazing day")
+    print("enjoy")
+    print("*------------------------*")
+
+
+
+#question price if house is 20 lkh  if buyer has good credit then they need to pay 10% of the price as down payment otherwise they need to pay 20% of the price as down payment. print the down payment and the house price should be  with unit at the end such as  L for lakh C for crore and K for thousand  and you have to convert that to integer and calculate .
+
+
+house_price =  "20C"
+has_good_credit = True
+h_unit = house_price[-1]
+
+hp = int(house_price.strip("LKC"))
+if (h_unit == "L"):
+    final_house_price = hp * math.pow(10, 5)
+elif (h_unit == "K"):
+    final_house_price = hp * math.pow(10, 3)
+elif (h_unit == "C"):
+    final_house_price = hp * math.pow(10, 7)
+else:
+    final_house_price = hp
+
+# here we converted the house price from string to integer and then we calculated the final house price based on the unit provided in the input. We used math.pow() function to calculate the power of 10 based on the unit provided in the input. Finally, we calculated the down payment based on whether the buyer has good credit or not and printed the down payment.
+
+
+if has_good_credit:
+    downpayment = final_house_price * 0.1
+else:
+    downpayment = final_house_price * 0.2
+
+print(f"house price: {final_house_price} ")
+print("The down payment amount is :")
+print("*-----------------------------*")
+print(f"|  down payment: {downpayment}   |")
+print("*-----------------------------*")
