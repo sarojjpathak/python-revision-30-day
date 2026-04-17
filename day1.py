@@ -89,8 +89,10 @@ print(bachelor_degree.capitalize())
 print(bachelor_degree.title())
 print(bachelor_degree.replace("information", "IT"))
 print(bachelor_degree.find("information"))
+#the find() function will return the index of the first occurrence of the specified substring. In this case it will return the index of the first occurrence of "information" in the string "bachelor in information technology". If the substring is not found it will return -1.
 print(bachelor_degree.count("a"))
 print(bachelor_degree.startswith("bachelor"))
+#passes boolean
 print(bachelor_degree.endswith("technology"))
 print(bachelor_degree.split())
 print(bachelor_degree.split("i"))
@@ -100,4 +102,57 @@ print(bachelor_degree.strip("bachelor, technology"))
 #the strip() function will remove the specified characters from the beginning and end of the string. In this case it will remove "bachelor" and "technology" from the beginning and end of the string. If we don't provide any characters it will remove the whitespace characters from the beginning and end of the string.
 a = "##@saroj@##"
 print(a.strip("#@"))
+#strip("#@") means:
+# Remove any combination of # and @ from the start and end of the string. either ##@ or @## or #@# or @#@ will be removed from the start and end of the string. In this case it will remove ##@ from the start and @## from the end of the string, leaving us with "saroj".
 print(len(bachelor_degree))
+print("bachelor" in bachelor_degree)
+#the in operator is used to check if a substring is present in a string. It will return True if the substring is present in the string and False if it is not present. In this case it will return True as "bachelor" is present in the string "bachelor in information technology".
+
+
+
+#ARITHMETIC OPERATORS
+#operators are used to perform various operations on variables and values. In Python, we have the following operators:
+#rules for operators in python:
+# precedence of operators:
+    # Parentheses
+    # Exponentiation then Multiplication and Division then Addition and Subtraction then Comparison operators then Logical operators then Assignment operators then Identity operators then Membership operators
+    # Associativity of operators:
+    # Direction	Operators
+# Left → Right	+ - * / // %, comparisons, and, or
+# Right → Left	**, assignment (=), unary (-x)
+# '+' is used for addition
+# '-' is used for subtraction
+# '*' is used for multiplication
+# '/' is used for division
+# '//' is used for floor division
+# for ceiling division we can use math.ceil() function from math module. It will return the smallest integer greater than or equal to the result of the division.  print(10/3) # this will return 4
+# '%' is used for modulus
+# '**' is used for exponentiation
+# '=' is used for assignment
+# '==' is used for equality comparison
+# '!=' is used for inequality comparison
+# '>' is used for greater than comparison
+# '<' is used for less than comparison
+# '>=' is used for greater than or equal to comparison
+# '<=' is used for less than or equal to comparison
+# 'and' is used for logical AND operation
+# 'or' is used for logical OR operation
+# 'not' is used for logical NOT operation
+# 'in' is used for membership testing
+# 'not in' is used for membership testing
+# 'is' is used for identity testing
+# 'is not' is used for identity testing
+#'+' operator can also be used for string concatenation. In this case it will concatenate two strings and return a new string. For example:
+first_name = "saroj"
+last_name = "pathak"
+full_name = first_name + " " + last_name
+print(full_name)
+
+
+
+# MATH FUNCTIONs
+
+x = 2.9
+print(round(x))
+x = -2.9
+print(abs(round(x)))
