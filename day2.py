@@ -241,3 +241,11 @@ print(thislist) # Output: ['banana', 'cherry', 'Kiwi', 'Orange']
 
 
 #basically sorting thing happen with original items but key tell the python in which term sorting is done 
+
+
+#reversing a list
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+
+thislist.reverse()
+
+print(thislist) 
