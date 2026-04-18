@@ -1,6 +1,6 @@
 op = True
 while True:
- help = input("")
+ help = input(">>")
  help = help.lower()
  if help == "help":
     print('''
