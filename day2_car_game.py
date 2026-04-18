@@ -1,6 +1,6 @@
 op = True
 while True:
- help = input(">>")
+ help = input(">")
  help = help.lower()
  if help == "help":
     print('''
@@ -11,6 +11,7 @@ while True:
     |  Your goal is to reach your destination safely.   |
     +---------------------------------------------------+
     ''')
+    op = True
  while op:
    
     cmd = input("Enter a command (start/stop/quit): ")
