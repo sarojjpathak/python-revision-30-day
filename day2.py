@@ -1,5 +1,5 @@
-# import math
-# import random
+import math
+import random
 # #while loop 
 # #  while condition: 
 # #      body of while loop
@@ -163,6 +163,9 @@ my_list.pop(2) # Output: [0, 1, 5, 6, 3, 4] # removes the item at index 2 which 
 my_list.pop() # Output: [0, 1, 5, 6, 3] # removes the last item which is 4 and returns it
 
 li = [1, 2, 3, 4, 5,4,6,88,64,7,4]
+
+
+
 #find the largest number from the list
 largest = li[0] 
 smallest = li[0]
@@ -173,3 +176,68 @@ for num in li:
         smallest = num
 print(f"The largest number in the list is: {largest}")
 print(f"The smallest number in the list is: {smallest}")
+
+
+#list comprehension is a concise way to create lists. It consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. The expression can be anything, meaning you can put in all kinds of objects in lists.
+
+
+# if you want to make a new list that contains only the items that have a certain condition you can use a for loop and an if statement to check the condition and append the items that meet the condition to the new list.
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+#list comprehension is a more concise way to achieve the same result as the above code. It allows you to create a new list by applying an expression to each item in an iterable, and optionally filtering items using a condition.
+print(newlist)
+#With list comprehension you can do all that with only one line of code:
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+
+numbers = [22,45,2,5,45,1, 2, 3, 4, 5]
+even =[n for n in numbers if n % 2 == 0]
+print(even)
+
+
+sq = [int(math.pow(n, 2)) for n in numbers if n % 2 == 0]
+print(sq)
+
+
+#sorting in list
+numbers = [22,45,2,5,45,1, 2, 3, 4, 5]
+numbers.sort(reverse=True) #this will give output in decending order and if we want to sort in ascending we just simply remove reverse = true  or make it false
+print(numbers)
+
+
+#Sort the list based on how close the number is to 50:
+
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)   #key is something that tells Python how to sort. so it sort according to distance from 50
+print(thislist)
+
+
+nums = [-10, 2, -3]
+nums.sort(key=abs, reverse=True)
+print(nums)
+
+
+#.sort() changes the original list
+#If you want a new list → use sorted()
+numbers = [22,45,2,5,45,1, 2, 3, 4, 5]
+sorted_numbers = sorted(numbers,reverse=True, key=myfunc) 
+
+
+#By default the sort() method is case sensitive, resulting in all capital letters being sorted before lower case letters
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort() # Output: ['Kiwi', 'Orange', 'banana', 'cherry']
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist) # Output: ['banana', 'cherry', 'Kiwi', 'Orange'] 
+
+
+#basically sorting thing happen with original items but key tell the python in which term sorting is done 
