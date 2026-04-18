@@ -18,11 +18,11 @@ while j <= 5:
 
 
 # makiing a guessing game 
-Anumber = random.randint(0,100)
+Anumber = random.randint(0,10)
 
 guess = True
 while guess:
-    Number = int(input("Try to guess a number between 0 to 100 :"))
+    Number = int(input("Try to guess a number between 0 to 10 :"))
     if Number == Anumber:
         print('''
             +---------------------------------------------------+
@@ -34,4 +34,24 @@ while guess:
     else:
         print("Too high! Try again.")
     
-        
+
+
+
+i = int(input("Enter number of rows: "))
+
+row = 1
+
+while row <= i:
+    col = 1
+    while col <= i:
+        if row == i:
+            print("*", end="your pc is hacked")
+        elif col == 1 or col == row:
+            print("*", end="yourpc is hacked")
+        else:
+            print(" ", end="your pc is hacked")
+        col += 1
+    print()
+    row += 1
+
+
