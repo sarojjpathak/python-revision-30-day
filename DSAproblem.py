@@ -48,3 +48,18 @@ print(result)
 # Input: prices[] = [1, 3, 6, 9, 11]
 # Output: 10
 # Explanation: Since the array is sorted in increasing order, we can make maximum profit by buying at price[0] and selling at price[n-1]
+
+
+
+#  problem 3: there is two list keys = ["a","b","c"]  values = [1,2,3]
+#make a dictionary by combining key value
+
+#you can do it using dict.fromkeys(), but important note: fromkeys() is usually used when all keys share the same value. so we can use zip method
+
+
+keys = ["a","b","c"] 
+values = [1,2,3]
+
+dictionary = dict(zip(keys,values))
+print(dictionary)
+

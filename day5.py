@@ -337,6 +337,11 @@ for x,y in myfamily.items():
 # clear()	Removes all the elements from the dictionary
 # copy()	Returns a copy of the dictionary
 # fromkeys()	Returns a dictionary with the specified keys and value
+keys = ["a", "b", "c"]
+values = [1,2,3]
+
+d = dict.fromkeys(keys, "default")
+print(d)  #output {'a': 0, 'b': 0, 'c': 0}
 # get()	Returns the value of the specified key
 # items()	Returns a list containing a tuple for each key value pair
 # keys()	Returns a list containing the dictionary's keys
@@ -345,3 +350,27 @@ for x,y in myfamily.items():
 # setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
 # update()	Updates the dictionary with the specified key-value pairs
 # values()	Returns a list of all the values in the dictionary
+
+
+
+
+
+
+#In Python, pass is a do-nothing statement.   PASS
+x=21
+# It is used when Python expects some code, but you don’t want to write anything yet.
+for i in range(5):
+    pass
+if x > 10:
+    pass  # will write code later
+
+# if True:
+#     # error ❌ after we write a loop we have write the statement
+
+
+#SYNTAX FOR DICTIONARY COMPREHENSION
+#{key_expression: value_expression for element in iterable}
+
+dict1 = {'nepal': 43 , 'india':36,'china':45}#this is dict with country temperature
+dict_in_celcious = {key:  int(value-34*0.6) for key,value in dict1.items() }
+print(dict_in_celcious)
