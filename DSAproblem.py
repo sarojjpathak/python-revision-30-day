@@ -49,6 +49,19 @@ print(result)
 # Output: 10
 # Explanation: Since the array is sorted in increasing order, we can make maximum profit by buying at price[0] and selling at price[n-1]
 
+prices = [7, 6, 4, 3, 1]
+profit = set()
+for b in range(0,len(prices)):
+  for s in range(b,len(prices)):
+    
+   profit.add(prices[s]-prices[b])
+
+print(f"maximun profit is {max(profit)}")
+
+
+
+
+
 
 
 #  problem 3: there is two list keys = ["a","b","c"]  values = [1,2,3]
