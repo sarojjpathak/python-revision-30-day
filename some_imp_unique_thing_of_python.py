@@ -79,3 +79,93 @@ match point:
         print("On Y axis")
     case _:
         print("Somewhere else")
+
+
+
+        #
+
+
+
+
+
+
+
+
+def det(sn,*args,**kwargs):
+   print(sn)
+   for n in args:
+    print(n)
+   print(f"Name :{kwargs["name"]}")
+   print(f"Age :{kwargs["age"]}")
+   print(kwargs)
+
+det("one","Here is your details","sir",name="Saroj Pathak" , age=22)
+
+
+
+
+#3======================global=================================
+#If you use the global keyword, the variable belongs to the global scope:
+x = 300
+
+def change():
+    global x
+    x = 200
+
+change()
+print(x)
+
+#global has one main purpose (modifying global variables), but there are a few practical patterns where it is used.
+count = 0
+
+def add_user():
+    global count
+    count += 1
+
+add_user()
+add_user()
+add_user()
+add_user()
+add_user()
+add_user()
+print(count)
+
+#basically we use global to modify the global variable from function or from local scope
+
+
+
+#4 -----------------------------nonlocal keyword-----------------
+# If you use the nonlocal keyword, the variable will belong to the outer function:
+
+def myfunc1():
+  x = "Jane"
+  def myfunc2():
+    nonlocal x
+    x = "hello"
+  myfunc2()
+  return x
+
+print(myfunc1())
+
+
+
+#5----------------------------The LEGB Rule--------------------------
+# Python follows the LEGB rule when looking up variable names, and searches for them in this order:
+
+# Local - Inside the current function
+# Enclosing - Inside enclosing functions (from inner to outer)
+# Global - At the top level of the module
+# Built-in - In Python's built-in namespace
+
+x = "global"
+
+def outer():
+  x = "enclosing"
+  def inner():
+    x = "local"
+    print("Inner:", x)
+  inner()
+  print("Outer:", x)
+
+outer()
+print("Global:", x)
