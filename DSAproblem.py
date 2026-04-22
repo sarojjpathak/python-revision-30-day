@@ -57,6 +57,7 @@ for b in range(0,len(prices)):
    profit.add(prices[s]-prices[b])
 
 print(f"maximun profit is {max(profit)}")
+#this is not optimal approach but logically this is right
 
 
 
