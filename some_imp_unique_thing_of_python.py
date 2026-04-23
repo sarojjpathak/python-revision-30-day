@@ -169,3 +169,6 @@ def outer():
 
 outer()
 print("Global:", x)
+
+
+#if there is not x = local in the inner block of code then when we call outer then enclosinng would have printed
