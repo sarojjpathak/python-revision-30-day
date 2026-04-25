@@ -189,8 +189,8 @@ info = {"name": "Saroj", "age": 20}
 # print(**info)  # ❌ invalid directly
 
 # ✔️ Correct use:
-
+info = {"name": "Saroj", "age": 20}
 def show(name, age):
     print(name, age)
 
-show(**info)
+show(**info) # here argu will became show(name = "saroj", age = 22) #this is how unpacking works  we cant directly unpack dict

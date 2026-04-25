@@ -136,3 +136,20 @@ frozen_numbers = frozenset([1, 2, 3])
 
 # Note When you use a method (like .union() or .intersection()), the type of the result is determined by the object on the left side of the operation.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

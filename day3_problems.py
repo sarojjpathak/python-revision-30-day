@@ -15,13 +15,12 @@ print(x)
 
 
 #another way 
-inputis = (input("enter a list"))
-inputis = list(int(inputis))
-for i in range(len(inputis)):
-    if inputis[i] == 0:
-        inputis.append(inputis.pop(i))
+input = [0,1,0,3,12]
+for i in range(len(input)):
+    if input[i] == 0:
+        input.append(input.pop(i))
 
-print(inputis)
+print(input)
 
 
 

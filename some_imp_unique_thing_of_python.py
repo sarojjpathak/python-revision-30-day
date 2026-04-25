@@ -172,3 +172,15 @@ print("Global:", x)
 
 
 #if there is not x = local in the inner block of code then when we call outer then enclosinng would have printed
+x = "global block"
+
+def outer():
+  x = "enclosing block"
+  def inner():
+    x = "local block"
+    print("Inner:", x)
+  inner()
+  print("Outer:", x)
+
+outer()
+print("Global:", x)
